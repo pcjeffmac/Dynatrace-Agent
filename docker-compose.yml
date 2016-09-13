@@ -1,9 +1,9 @@
 dtagent:
-  container_name: "dtagent"
-  hostname: "docker-dtagent"
-  image: "dynatrace/agent:6.5"
+  container_name: "dtagent65"
+  hostname: "docker-dtagent65"
+  image: "pcjeffmac/dynatrace-agent"
   environment:
-    DT_AGENT_NAME: "dtagent"
+    DT_AGENT_NAME: "dtagent65"
   volumes:
     - /dynatrace
-    - "/tmp/log/dynatrace/agents/dtagent:/dynatrace/log/agent"
+    - "/tmp/log/dynatrace/agents/dtagent65:/dynatrace/log/agent65"

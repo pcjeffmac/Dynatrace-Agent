@@ -3,9 +3,9 @@ FROM debian:wheezy
 MAINTAINER Martin Etmajer <martin.etmajer@dynatrace.com>
 
 ENV VERSION                 "6.5"
-ENV NODE_INSTALLER64_URL    "https://drive.google.com/file/d/0B9zZ0e7DiomrREdpMWZaSnRFWXc/view?usp=sharing"
-ENV WSAGENT_INSTALLER32_URL "https://drive.google.com/file/d/0B9zZ0e7Diomrc2JuSlhFTFpqems/view?usp=sharing"
-ENV WSAGENT_INSTALLER64_URL "https://drive.google.com/file/d/0B9zZ0e7Diomrd1ZoODhjQTY0OVU/view?usp=sharing"
+ENV NODE_INSTALLER64_URL    "https://dl.dropboxusercontent.com/u/61124235/dynatrace-one-agent-nodejs-6.5.0.1278-linux-x86.tgz"
+ENV WSAGENT_INSTALLER32_URL "https://dl.dropboxusercontent.com/u/61124235/dynatrace-wsagent-6.5.0.1278-linux-x86-32.tar"
+ENV WSAGENT_INSTALLER64_URL "https://dl.dropboxusercontent.com/u/61124235/dynatrace-wsagent-6.5.0.1278-linux-x86-64.tar"
 
 ENV DT                      "/dynatrace"
 ENV AGENT_LIB32             "${DT}/agent/lib/libdtagent.so"

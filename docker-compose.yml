@@ -5,5 +5,5 @@ dtagent:
   environment:
     DT_AGENT_NAME: "dtagent"
   volumes:
-    - "/dynatrace"
+    - /dynatrace
     - "/tmp/log/dynatrace/agents/dtagent:/dynatrace/log/agent"

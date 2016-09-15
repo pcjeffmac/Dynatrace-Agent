@@ -11,4 +11,4 @@ docker run \
   --env DT_AGENT_NAME="${NAME}" \
   --volume /dynatrace \
   --volume ${HOST_LOG_DIR}:/dynatrace/log/agent \
-  pcjeffmac/dynatrace-agent
+  pcjeffmac/dynatrace-agent:6.5

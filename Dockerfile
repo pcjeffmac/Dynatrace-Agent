@@ -16,13 +16,12 @@ ENV WSAGENT_BIN64           "${DT}/agent/lib64/dtwsagent"
 ENV WSAGENT_INI             "${DT}/agent/conf/dtwsagent.ini"
 ENV SLAVE_AGENT_PORT        "8001"
 
-ENV  DT_INSTALL_DEPS "curl"
+ENV  DT_INSTALL_DEPS "curl openjdk-7-jre"
 ENV  DT_RUNTIME_DEPS "procps"
 COPY build/scripts/install-node-agent.sh /usr/bin
 COPY build/scripts/install-wsagent.sh /usr/bin
 COPY build/scripts/install-java-agent.sh /usr/bin
-RUN  apt-get install openjdk-7-jre -y && \
-	 apt-get update && \
+RUN  apt-get update && \
      apt-get install -y --no-install-recommends ${DT_INSTALL_DEPS} ${DT_RUNTIME_DEPS} && \
      mkdir -p ${DT} && \
      install-wsagent.sh ${WSAGENT_INSTALLER32_URL} && \

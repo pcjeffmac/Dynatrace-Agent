@@ -3,10 +3,10 @@ FROM debian:wheezy
 MAINTAINER Martin Etmajer <martin.etmajer@dynatrace.com>
 
 ENV VERSION                 "6.5"
-ENV NODE_INSTALLER64_URL    "https://dl.dropboxusercontent.com/u/61124235/dynatrace-one-agent-nodejs-6.5.0.1278-linux-x86.tgz"
-ENV WSAGENT_INSTALLER32_URL "https://dl.dropboxusercontent.com/u/61124235/dynatrace-wsagent-6.5.0.1278-linux-x86-32.tar"
-ENV WSAGENT_INSTALLER64_URL "https://dl.dropboxusercontent.com/u/61124235/dynatrace-wsagent-6.5.0.1278-linux-x86-64.tar"
-ENV JAVA_INSTALLER64_URL    "https://dl.dropboxusercontent.com/u/61124235/dynatrace-agent-6.5.0.1278-unix.jar"
+ENV NODE_INSTALLER64_URL    "https://dl.dropboxusercontent.com/u/61124235/dt6.5/dynatrace-one-agent-nodejs-6.5.0.1287-linux-x86.tgz"
+ENV WSAGENT_INSTALLER32_URL "https://dl.dropboxusercontent.com/u/61124235/dt6.5/dynatrace-wsagent-6.5.0.1287-linux-x86-32.tar"
+ENV WSAGENT_INSTALLER64_URL "https://dl.dropboxusercontent.com/u/61124235/dt6.5/dynatrace-wsagent-6.5.0.1287-linux-x86-64.tar"
+ENV JAVA_INSTALLER64_URL    "https://dl.dropboxusercontent.com/u/61124235/dt6.5/dynatrace-agent-6.5.0.1287-unix.jar"
 
 ENV DT                      "/dynatrace"
 ENV AGENT_LIB32             "${DT}/agent/lib/libdtagent.so"
@@ -16,7 +16,7 @@ ENV WSAGENT_BIN64           "${DT}/agent/lib64/dtwsagent"
 ENV WSAGENT_INI             "${DT}/agent/conf/dtwsagent.ini"
 ENV SLAVE_AGENT_PORT        "8001"
 
-ENV  DT_INSTALL_DEPS "curl openjdk-7-jre"
+ENV  DT_INSTALL_DEPS "curl openjdk-7-jre-headless"
 ENV  DT_RUNTIME_DEPS "procps"
 COPY build/scripts/install-node-agent.sh /usr/bin
 COPY build/scripts/install-wsagent.sh /usr/bin

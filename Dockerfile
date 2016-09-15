@@ -2,7 +2,7 @@ FROM debian:wheezy
 
 MAINTAINER Martin Etmajer <martin.etmajer@dynatrace.com>
 
-ENV VERSION                 "6.5"
+ENV VERSION                 "6.5.0.1278"
 ENV NODE_INSTALLER64_URL    "https://dl.dropboxusercontent.com/u/61124235/dynatrace-one-agent-nodejs-6.5.0.1278-linux-x86.tgz"
 ENV WSAGENT_INSTALLER32_URL "https://dl.dropboxusercontent.com/u/61124235/dynatrace-wsagent-6.5.0.1278-linux-x86-32.tar"
 ENV WSAGENT_INSTALLER64_URL "https://dl.dropboxusercontent.com/u/61124235/dynatrace-wsagent-6.5.0.1278-linux-x86-64.tar"
